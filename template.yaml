@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Saturn Excel Ingestion Lambda (local SAM)
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 30
+  Api:
+    BinaryMediaTypes:
+      - '*/*'
+
+Resources:
+  SaturnExcelIngestionFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: saturn_excel_ingestion
+      Runtime: python3.10
+      Handler: app.lambda_handler
+      CodeUri: saturn_excel_ingestion/
+      Events:
+        IngestApi:
+          Type: Api
+          Properties:
+            Path: /ingest
+            Method: POST

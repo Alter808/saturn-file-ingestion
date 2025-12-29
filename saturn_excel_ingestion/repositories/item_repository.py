@@ -97,11 +97,11 @@ def insert_items(items: list[dict]):
         db_config = get_secret("saturn/ingest/dev", "us-east-1","saturn")
     else:
         db_config = {
-            "user": "saturn_file_ingestor", 
-            "password": "dK@L}0?2(7%c", 
-            "host": "dev-saturn-mysql-cluster.cluster-cdm6igmm8pgv.us-west-2.rds.amazonaws.com", 
+            "user": "user", 
+            "password": "pwd", 
+            "host": "hostname", 
             "port": 3306, 
-            "database": "saturn_december_e2e_2025"
+            "database": "database_name"
         }
         
     conn = pymysql.connect(**db_config, autocommit=False)

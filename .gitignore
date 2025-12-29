@@ -242,4 +242,37 @@ $RECYCLE.BIN/
 
 */build/*
 
+# ===== Terraform =====
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/crash.log
+**/crash.*.log
+**/.terraformrc
+**/terraform.rc
+**/*.tfvars
+**/*.tfvars.json
+
+# Keep lock file (recommended)
+!.terraform.lock.hcl
+
+# ===== AWS SAM =====
+.aws-sam/
+
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+# ===== OS / IDE =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+
 # End of https://www.gitignore.io/api/osx,linux,python,windows,pycharm,visualstudiocode

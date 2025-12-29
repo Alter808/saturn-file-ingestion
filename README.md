@@ -93,8 +93,10 @@ file=<file.xlsx>
 
 ## Local Development
 
+```bash
 sam build
 sam local start-api
+```
 
 ## Local endpoint:
 

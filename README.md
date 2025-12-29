@@ -41,18 +41,22 @@ The service is tolerant but enforces required structure where needed.
 
 ## Project Structure
 
+## Project Structure
+
+```text
 saturn-file-ingestion/
-├── app.py # Lambda entry point
-├── constants.py # Global constants
-├── multipart_parser.py # Multipart/form-data parsing
-├── excel_service.py # Excel processing logic
-├── validators/ # Request, sheet and row validation
-├── mappers/ # Row normalization and casting
-├── repositories/ # Database access (PyMySQL)
-├── services/ # AWS helpers (Secrets Manager)
-├── terraform/ # Infrastructure (IAM, roles, policies)
+├── app.py                     # Lambda entry point
+├── constants.py               # Global constants
+├── multipart_parser.py        # Multipart/form-data parsing
+├── excel_service.py           # Excel processing logic
+├── validators/                # Request, sheet and row validation
+├── mappers/                   # Row normalization and casting
+├── repositories/              # Database access (PyMySQL)
+├── services/                  # AWS helpers (Secrets Manager)
+├── terraform/                 # Infrastructure (IAM, roles, policies)
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
